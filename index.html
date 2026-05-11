@@ -214,6 +214,36 @@ nav.scrolled .nav-logo svg{filter:brightness(1.2) contrast(1.1) saturate(120%) h
 /* MOBILE MENU - Keep only open state */
 .mob-menu.open{display:flex;opacity:1;pointer-events:auto}
 
+/* SOCIAL BUTTONS ANIMATION */
+@keyframes socialPulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.08);
+  }
+}
+
+.social-btn {
+  animation: socialPulse 2s ease-in-out infinite;
+}
+
+.social-btn:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.social-btn:nth-child(2) {
+  animation-delay: 0.3s;
+}
+
+.social-btn:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+.social-btn:hover {
+  animation: none;
+}
+
 /* RESPONSIVE */
 @media(max-width:1024px){
   .services-grid,.founder-inner{grid-template-columns:1fr}
@@ -865,7 +895,7 @@ nav.scrolled .nav-logo svg{filter:brightness(1.2) contrast(1.1) saturate(120%) h
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center mb-16 lg:mb-20 reveal">
       <div class="order-2 lg:order-1">
         <div class="flex items-start gap-4 mb-5">
-          <div class="flex-shrink-0 w-12 h-12 rounded-full border-2 border-gold/40 flex items-center justify-center font-serif text-lg text-gold bg-mocha-2">01</div>
+          <div class="flex-shrink-0 w-12 h-12 rounded-full border-2 border-gold/40 flex items-center justify-center font-sans text-lg text-gold bg-mocha-2">01</div>
           <div>
             <h3 class="font-serif text-[1.6rem] md:text-[1.8rem] font-normal text-cream leading-tight mb-3">Consultation</h3>
             <p class="text-[0.92rem] leading-[1.85] text-cream-3">Contact us and share your requirements. Our team collects basic project details and schedules a site visit.</p>
@@ -888,7 +918,7 @@ nav.scrolled .nav-logo svg{filter:brightness(1.2) contrast(1.1) saturate(120%) h
       </div>
       <div>
         <div class="flex items-start gap-4 mb-5">
-          <div class="flex-shrink-0 w-12 h-12 rounded-full border-2 border-gold/40 flex items-center justify-center font-serif text-lg text-gold bg-mocha-2">02</div>
+          <div class="flex-shrink-0 w-12 h-12 rounded-full border-2 border-gold/40 flex items-center justify-center font-sans text-lg text-gold bg-mocha-2">02</div>
           <div>
             <h3 class="font-serif text-[1.6rem] md:text-[1.8rem] font-normal text-cream leading-tight mb-3">Site Visit & Estimate</h3>
             <p class="text-[0.92rem] leading-[1.85] text-cream-3">We visit your location, understand requirements, and provide a rough cost estimate.</p>
@@ -901,7 +931,7 @@ nav.scrolled .nav-logo svg{filter:brightness(1.2) contrast(1.1) saturate(120%) h
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center mb-16 lg:mb-20 reveal">
       <div class="order-2 lg:order-1">
         <div class="flex items-start gap-4 mb-5">
-          <div class="flex-shrink-0 w-12 h-12 rounded-full border-2 border-gold/40 flex items-center justify-center font-serif text-lg text-gold bg-mocha-2">03</div>
+          <div class="flex-shrink-0 w-12 h-12 rounded-full border-2 border-gold/40 flex items-center justify-center font-sans text-lg text-gold bg-mocha-2">03</div>
           <div>
             <h3 class="font-serif text-[1.6rem] md:text-[1.8rem] font-normal text-cream leading-tight mb-3">Design Development</h3>
             <p class="text-[0.92rem] leading-[1.85] text-cream-3">Choose from our design collection or get a fully customized design from our expert team.</p>
@@ -924,7 +954,7 @@ nav.scrolled .nav-logo svg{filter:brightness(1.2) contrast(1.1) saturate(120%) h
       </div>
       <div>
         <div class="flex items-start gap-4 mb-5">
-          <div class="flex-shrink-0 w-12 h-12 rounded-full border-2 border-gold/40 flex items-center justify-center font-serif text-lg text-gold bg-mocha-2">04</div>
+          <div class="flex-shrink-0 w-12 h-12 rounded-full border-2 border-gold/40 flex items-center justify-center font-sans text-lg text-gold bg-mocha-2">04</div>
           <div>
             <h3 class="font-serif text-[1.6rem] md:text-[1.8rem] font-normal text-cream leading-tight mb-3">Final Costing</h3>
             <p class="text-[0.92rem] leading-[1.85] text-cream-3">After design approval, we finalize the budget based on selected materials and scope.</p>
@@ -937,7 +967,7 @@ nav.scrolled .nav-logo svg{filter:brightness(1.2) contrast(1.1) saturate(120%) h
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center mb-16 lg:mb-20 reveal">
       <div class="order-2 lg:order-1">
         <div class="flex items-start gap-4 mb-5">
-          <div class="flex-shrink-0 w-12 h-12 rounded-full border-2 border-gold/40 flex items-center justify-center font-serif text-lg text-gold bg-mocha-2">05</div>
+          <div class="flex-shrink-0 w-12 h-12 rounded-full border-2 border-gold/40 flex items-center justify-center font-sans text-lg text-gold bg-mocha-2">05</div>
           <div>
             <h3 class="font-serif text-[1.6rem] md:text-[1.8rem] font-normal text-cream leading-tight mb-3">Agreement & Planning</h3>
             <p class="text-[0.92rem] leading-[1.85] text-cream-3">Both parties sign an agreement. We set timeline, payment schedule, and execution plan.</p>
@@ -960,7 +990,7 @@ nav.scrolled .nav-logo svg{filter:brightness(1.2) contrast(1.1) saturate(120%) h
       </div>
       <div>
         <div class="flex items-start gap-4 mb-5">
-          <div class="flex-shrink-0 w-12 h-12 rounded-full border-2 border-gold/40 flex items-center justify-center font-serif text-lg text-gold bg-mocha-2">06</div>
+          <div class="flex-shrink-0 w-12 h-12 rounded-full border-2 border-gold/40 flex items-center justify-center font-sans text-lg text-gold bg-mocha-2">06</div>
           <div>
             <h3 class="font-serif text-[1.6rem] md:text-[1.8rem] font-normal text-cream leading-tight mb-3">Execution & Delivery</h3>
             <p class="text-[0.92rem] leading-[1.85] text-cream-3">Our team executes the project efficiently and delivers on time with quality assurance.</p>
@@ -1679,19 +1709,22 @@ document.getElementById('tw-font').addEventListener('change',function(){
 </script>
 
 <!-- Social Proof Toast Notification -->
-<div id="socialToast" class="fixed bottom-6 left-6 z-50 bg-mocha-2 border border-gold/20 rounded-lg shadow-2xl px-4 py-3 max-w-[280px] transform -translate-x-[400px] transition-all duration-500 ease-out">
+<div id="socialToast" class="fixed bottom-6 left-6 z-50 bg-mocha-2 border border-gold/20 rounded-lg shadow-2xl px-4 py-3 max-w-[300px] transform -translate-x-[400px] transition-all duration-500 ease-out">
   <div class="flex items-start gap-3">
-    <div class="w-10 h-10 rounded-full bg-gold/10 border border-gold/30 flex items-center justify-center flex-shrink-0">
-      <svg class="w-5 h-5 text-gold" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
-      </svg>
-    </div>
+    <img id="toastAvatar" src="" alt="" class="w-10 h-10 rounded-full object-cover border border-gold/25 flex-shrink-0">
     <div class="flex-1 min-w-0">
-      <p class="text-cream text-[0.8rem] font-medium leading-tight mb-1" id="toastName">Mr. Karim Ahmed</p>
-      <p class="text-cream-3 text-[0.7rem] leading-tight" id="toastAction">booked a consultation</p>
-      <p class="text-gold text-[0.65rem] mt-1" id="toastTime">3 minutes ago</p>
+      <div class="flex gap-[2px] mb-[5px]">
+        <svg class="w-[10px] h-[10px] text-gold" viewBox="0 0 14 14" fill="currentColor"><polygon points="7,1 9,5.5 14,6.2 10.5,9.6 11.4,14 7,11.6 2.6,14 3.5,9.6 0,6.2 5,5.5"/></svg>
+        <svg class="w-[10px] h-[10px] text-gold" viewBox="0 0 14 14" fill="currentColor"><polygon points="7,1 9,5.5 14,6.2 10.5,9.6 11.4,14 7,11.6 2.6,14 3.5,9.6 0,6.2 5,5.5"/></svg>
+        <svg class="w-[10px] h-[10px] text-gold" viewBox="0 0 14 14" fill="currentColor"><polygon points="7,1 9,5.5 14,6.2 10.5,9.6 11.4,14 7,11.6 2.6,14 3.5,9.6 0,6.2 5,5.5"/></svg>
+        <svg class="w-[10px] h-[10px] text-gold" viewBox="0 0 14 14" fill="currentColor"><polygon points="7,1 9,5.5 14,6.2 10.5,9.6 11.4,14 7,11.6 2.6,14 3.5,9.6 0,6.2 5,5.5"/></svg>
+        <svg class="w-[10px] h-[10px] text-gold" viewBox="0 0 14 14" fill="currentColor"><polygon points="7,1 9,5.5 14,6.2 10.5,9.6 11.4,14 7,11.6 2.6,14 3.5,9.6 0,6.2 5,5.5"/></svg>
+      </div>
+      <p class="text-cream-3 text-[0.72rem] leading-[1.5] italic mb-[6px]" id="toastQuote"></p>
+      <p class="text-cream text-[0.75rem] font-medium leading-tight" id="toastName"></p>
+      <p class="text-gold text-[0.65rem] tracking-[0.08em]" id="toastLoc"></p>
     </div>
-    <button onclick="closeToast()" class="text-cream-3 hover:text-cream transition-colors ml-1">
+    <button onclick="closeToast()" class="text-cream-3 hover:text-cream transition-colors ml-1 flex-shrink-0">
       <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
       </svg>
@@ -1700,125 +1733,77 @@ document.getElementById('tw-font').addEventListener('change',function(){
 </div>
 
 <!-- Contact Buttons -->
-<div class="fixed bottom-6 right-6 z-50 flex flex-col gap-3">
+<div class="fixed bottom-6 right-6 z-50 flex flex-col gap-3" style="font-family: 'DM Sans', system-ui, Bangla864, sans-serif;">
   <!-- WhatsApp Button -->
-  <a href="https://wa.link/jmpngz" target="_blank" class="w-14 h-14 bg-mocha-2 rounded-full flex items-center justify-center shadow-lg border border-gold/30 transition-all duration-300 hover:bg-gold hover:border-gold hover:scale-110 group" aria-label="Message us on WhatsApp">
-    <svg class="w-7 h-7 text-gold group-hover:text-mocha transition-colors duration-300" fill="currentColor" viewBox="0 0 24 24">
-      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+  <a href="https://wa.link/jmpngz" target="_blank" class="social-btn w-14 h-14 rounded-full flex items-center justify-center shadow-lg border-0 transition-all duration-300 hover:scale-110" aria-label="Message us on WhatsApp">
+    <svg class="w-12 h-12" viewBox="0 0 175.216 175.552" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="whatsapp-gradient" x1="85.915" x2="86.535" y1="32.567" y2="137.092" gradientUnits="userSpaceOnUse">
+          <stop offset="0" stop-color="#57d163"/>
+          <stop offset="1" stop-color="#23b33a"/>
+        </linearGradient>
+      </defs>
+      <path fill="url(#whatsapp-gradient)" d="M87.184 25.227c-33.733 0-61.166 27.423-61.178 61.13a60.98 60.98 0 0 0 9.349 32.535l1.455 2.312-6.179 22.559 23.146-6.069 2.235 1.324c9.387 5.571 20.15 8.518 31.126 8.524h.023c33.707 0 61.14-27.426 61.153-61.135a60.75 60.75 0 0 0-17.895-43.251 60.75 60.75 0 0 0-43.235-17.929z"/>
+      <path fill="#fff" d="M68.772 55.603c-1.378-3.061-2.828-3.123-4.137-3.176l-3.524-.043c-1.226 0-3.218.46-4.902 2.3s-6.435 6.287-6.435 15.332 6.588 17.785 7.506 19.013 12.718 20.381 31.405 27.75c15.529 6.124 18.689 4.906 22.061 4.6s10.877-4.447 12.408-8.74 1.532-7.971 1.073-8.74-1.685-1.226-3.525-2.146-10.877-5.367-12.562-5.981-2.91-.919-4.137.921-4.746 5.979-5.819 7.206-2.144 1.381-3.984.462-7.76-2.861-14.784-9.124c-5.465-4.873-9.154-10.891-10.228-12.73s-.114-2.835.808-3.751c.825-.824 1.838-2.147 2.759-3.22s1.224-1.84 1.836-3.065.307-2.301-.153-3.22-4.032-10.011-5.666-13.647"/>
+    </svg>
+  </a>
+  
+  <!-- Messenger Button -->
+  <a href="https://m.me/chitroninterion" target="_blank" class="social-btn w-14 h-14 rounded-full flex items-center justify-center shadow-lg border-0 transition-all duration-300 hover:scale-110" aria-label="Message us on Messenger">
+    <svg class="w-12 h-12" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+      <radialGradient id="messenger-gradient" cx="19.38" cy="42.035" r="44.899" gradientUnits="userSpaceOnUse">
+        <stop offset="0" stop-color="#0099ff"/>
+        <stop offset=".61" stop-color="#a033ff"/>
+        <stop offset=".935" stop-color="#ff5280"/>
+      </radialGradient>
+      <path fill="url(#messenger-gradient)" d="M24,4C12.954,4,4,12.615,4,23.283c0,5.923,2.617,11.227,6.714,14.811V45l6.67-3.662C19.333,41.777,21.617,42,24,42c11.046,0,20-8.615,20-18.717C44,12.615,35.046,4,24,4z"/>
+      <path fill="#fff" d="M12.5,27.5l6.9-10.9l6.6,3.6l6.5-3.6L25.5,27.5l-6.6-3.6L12.5,27.5z"/>
     </svg>
   </a>
   
   <!-- Phone Call Button -->
-  <a href="tel:+8801234567890" class="w-14 h-14 bg-mocha-2 rounded-full flex items-center justify-center shadow-lg border border-gold/30 transition-all duration-300 hover:bg-gold hover:border-gold hover:scale-110 group" aria-label="Call us">
-    <svg class="w-7 h-7 text-gold group-hover:text-mocha transition-colors duration-300" fill="currentColor" viewBox="0 0 24 24">
-      <path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 00-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"/>
-    </svg>
-  </a>
-  
-  <!-- Message/Chat Button -->
-  <a href="https://m.me/chitroninterion" target="_blank" class="w-14 h-14 bg-mocha-2 rounded-full flex items-center justify-center shadow-lg border border-gold/30 transition-all duration-300 hover:bg-gold hover:border-gold hover:scale-110 group" aria-label="Chat with us">
-    <svg class="w-7 h-7 text-gold group-hover:text-mocha transition-colors duration-300" fill="currentColor" viewBox="0 0 24 24">
-      <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z"/>
+  <a href="tel:+8801234567890" class="social-btn w-14 h-14 rounded-full flex items-center justify-center shadow-lg border-0 transition-all duration-300 hover:scale-110" aria-label="Call us">
+    <svg class="w-10 h-10" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 00-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z" fill="#fff"/>
     </svg>
   </a>
 </div>
 
 <script>
-// Social Proof Toast Notification System with Dynamic Randomization
-const firstNames = ["Karim", "Fatima", "Rohim", "Ayesha", "Shakib", "Nusrat", "Tanvir", "Dilsat", "Rafiq", "Tasnim", "Hasan", "Sultana", "Mahmud", "Jamal", "Razia", "Farhan", "Nasrin", "Imran", "Sabina", "Arif"];
-const lastNames = ["Ahmed", "Rahman", "Hossain", "Khan", "Mahmud", "Jahan", "Islam", "Chowdhury", "Begum", "Ali", "Akter", "Hassan", "Karim", "Sultana", "Miah", "Uddin", "Khatun", "Siddique", "Alam", "Bhuiyan"];
-const titles = ["Mr.", "Mrs.", "Ms.", "Dr."];
-const actions = [
-  "booked a consultation",
-  "requested a site visit", 
-  "viewed the portfolio",
-  "requested a quote",
-  "scheduled a meeting",
-  "inquired about services",
-  "downloaded the brochure",
-  "requested a callback",
-  "viewed project gallery",
-  "asked about pricing"
+// Toast from real testimonials
+const toastTestimonials = [
+  { name: 'Mst. Dilsat Jakia', loc: 'Dhanmondi, Dhaka', avatar: 'https://picsum.photos/seed/dilsat/80/80', quote: '"Chitron delivered a home that exceeded every expectation. Every element works in perfect harmony."' },
+  { name: 'Rafiq Islam', loc: 'Motijheel, Dhaka', avatar: 'https://picsum.photos/seed/rafiq/80/80', quote: '"They returned a design that genuinely embodies our brand values. Productivity and morale both improved."' },
+  { name: 'Karim Chowdhury', loc: 'Narayanganj', avatar: 'https://picsum.photos/seed/karim/80/80', quote: '"Chitron designed spaces that are practical for everyday life but feel luxurious and welcoming."' },
+  { name: 'Tasnim Rahman', loc: 'United City, Dhaka', avatar: 'https://picsum.photos/seed/tasnim/80/80', quote: '"Timely, honest, and talented. That level of transparency and professionalism is rare in this industry."' },
+  { name: 'Hasan Mahmud', loc: 'Gulshan, Dhaka', avatar: 'https://picsum.photos/seed/hasan/80/80', quote: '"They transformed our restaurant into a space that our customers love and remember."' },
+  { name: 'Nadia Sultana', loc: 'Banani, Dhaka', avatar: 'https://picsum.photos/seed/nadia/80/80', quote: '"They understood our vision for a modern yet warm home and delivered beyond expectations."' },
 ];
-const locations = ["Dhanmondi", "Gulshan", "Banani", "Uttara", "Mirpur", "Mohammadpur", "Bashundhara", "Motijheel", "Narayanganj", "Gazipur"];
 
+let toastIdx = 0;
 let toastVisible = false;
-let toastTimeout;
-let cycleTimeout;
-let usedCombinations = new Set();
-
-function getRandomItem(array) {
-  return array[Math.floor(Math.random() * array.length)];
-}
-
-function generateRandomTime() {
-  const minutes = Math.floor(Math.random() * 45) + 2; // 2-46 minutes
-  return `${minutes} minute${minutes > 1 ? 's' : ''} ago`;
-}
-
-function generateUniqueToast() {
-  let combination;
-  let attempts = 0;
-  const maxAttempts = 100;
-  
-  do {
-    const title = getRandomItem(titles);
-    const firstName = getRandomItem(firstNames);
-    const lastName = getRandomItem(lastNames);
-    const action = getRandomItem(actions);
-    const time = generateRandomTime();
-    
-    combination = `${title} ${firstName} ${lastName}|${action}|${time}`;
-    attempts++;
-    
-    // If we've used all combinations, clear the history
-    if (attempts > maxAttempts) {
-      usedCombinations.clear();
-      break;
-    }
-  } while (usedCombinations.has(combination));
-  
-  usedCombinations.add(combination);
-  
-  // Keep only last 50 combinations to prevent memory issues
-  if (usedCombinations.size > 50) {
-    const firstItem = usedCombinations.values().next().value;
-    usedCombinations.delete(firstItem);
-  }
-  
-  const [name, action, time] = combination.split('|');
-  return { name, action, time };
-}
+let toastTimeout, cycleTimeout;
 
 function showToast() {
   const toast = document.getElementById('socialToast');
-  const data = generateUniqueToast();
-  
-  // Update content
+  const data = toastTestimonials[toastIdx];
+  toastIdx = (toastIdx + 1) % toastTestimonials.length;
+
+  document.getElementById('toastAvatar').src = data.avatar;
+  document.getElementById('toastAvatar').alt = data.name;
+  document.getElementById('toastQuote').textContent = data.quote;
   document.getElementById('toastName').textContent = data.name;
-  document.getElementById('toastAction').textContent = data.action;
-  document.getElementById('toastTime').textContent = data.time;
-  
-  // Show toast (slide in from left)
+  document.getElementById('toastLoc').textContent = data.loc;
+
   toast.style.transform = 'translateX(0)';
   toastVisible = true;
-  
-  // Auto-hide after 5 seconds
-  toastTimeout = setTimeout(() => {
-    hideToast();
-  }, 5000);
+  toastTimeout = setTimeout(hideToast, 5000);
 }
 
 function hideToast() {
-  const toast = document.getElementById('socialToast');
-  toast.style.transform = 'translateX(-400px)';
+  document.getElementById('socialToast').style.transform = 'translateX(-400px)';
   toastVisible = false;
-  
-  // Show next toast after random interval (8-15 seconds)
-  const nextInterval = Math.floor(Math.random() * 7000) + 8000;
-  cycleTimeout = setTimeout(() => {
-    showToast();
-  }, nextInterval);
+  cycleTimeout = setTimeout(showToast, Math.floor(Math.random() * 7000) + 8000);
 }
 
 function closeToast() {
@@ -1826,12 +1811,7 @@ function closeToast() {
   hideToast();
 }
 
-// Start the toast cycle after page loads
-window.addEventListener('load', () => {
-  setTimeout(() => {
-    showToast();
-  }, 3000); // First toast appears 3 seconds after page load
-});
+window.addEventListener('load', () => { setTimeout(showToast, 3000); });
 </script>
 
 </body>
